@@ -1,0 +1,32 @@
+﻿<Window x:Class="ListKu.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ListKu"
+        mc:Ignorable="d"
+        Title="ListKu" Height="720" Width="1280">
+    <Grid Margin="10">
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="46*" />
+            <ColumnDefinition Width="7*"/>
+            <ColumnDefinition Width="577*"/>
+            <ColumnDefinition Width="630*" />
+        </Grid.ColumnDefinitions>
+
+        <Label>Lists</Label>
+        <ListBox Grid.Row="1" x:Name="lstNames" Grid.ColumnSpan="3" />
+
+        <StackPanel Grid.Row="1" Grid.Column="3" Margin="5,0,0,0">
+            <TextBox x:Name="txtName" />
+            <Button x:Name="btnAdd" Margin="0,5,0,0" Click="ButtonAddName_Click" Background="#FF8EDC83">Add to list</Button>
+        </StackPanel>
+
+    </Grid>
+</Window>
